@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run clean && clear && ELEVENTY_ENV=development npx eleventy --serve",
     "production": "npm run clean && npx eleventy",
+    "serve": "npx eleventy --serve",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "clean": "rm -rf build"
   },
