@@ -1,0 +1,6 @@
+jsdoc
+docs
+docs-src
+test
+coverage
+.*

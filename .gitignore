@@ -1,13 +1,27 @@
-build/
+# Generated files
+package/generated*
 
-node_modules
+# Ignore installed npm modules
+node_modules/
 
-.npm
+# Ignore build tool output, e.g. code coverage
+.nyc_output/
+coverage/
+docs/_data/coverage.json
+jsdoc/
+
+# Ignore API documentation
+api-docs/
+
+# Ignore folders from source code editors
+.vscode
+.idea
+
+# Ignore eleventy output when doing manual tests
+_site/
+
 package-lock.json
-npm-debug.log*
 
-logs
-*.log
-
-.DS_Store
-Thumbs.db
+# Ignore test files
+.cache
+test/stubs-layout-cache/_includes/*.js
