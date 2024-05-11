@@ -1,5 +1,5 @@
 ---
-title: 11ty starter site
+title: Aliados pelo Rio Grande do Sul
 description: This is a demonstration website generated using the 11ty static site generator.
 layout: page.njk
 eleventyNavigation:
