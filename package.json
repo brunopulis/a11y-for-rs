@@ -1,0 +1,28 @@
+{
+  "name": "a11y-for-rs",
+  "version": "1.0.0",
+  "description": "A11y for RS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunopulis/a11y-for-rs.git"
+  },
+  "keywords": [
+    "Rio",
+    "Grande",
+    "do",
+    "Sul",
+    "A11y",
+    "doações",
+    "donation"
+  ],
+  "author": "Bruno Pulis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunopulis/a11y-for-rs/issues"
+  },
+  "homepage": "https://github.com/brunopulis/a11y-for-rs#readme"
+}
