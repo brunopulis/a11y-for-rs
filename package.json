@@ -4,7 +4,10 @@
   "description": "A11y for RS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run clean && clear && ELEVENTY_ENV=development npx eleventy --serve",
+    "production": "npm run clean && npx eleventy",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "clean": "rm -rf build"
   },
   "repository": {
     "type": "git",
@@ -19,8 +22,27 @@
     "doações",
     "donation"
   ],
-  "author": "Bruno Pulis",
-  "license": "ISC",
+  "author": "Craig Buckler",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "@11ty/eleventy-plugin-rss": "^1.0.9",
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "imagemin": "^7.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.1",
+    "imagemin-svgo": "^8.0.0",
+    "inline-source": "^7.2.0",
+    "postcss": "^7.0.32",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-nested": "^4.2.3",
+    "postcss-scss": "^2.1.1",
+    "rollup": "^2.26.11",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "dependencies": {},
   "bugs": {
     "url": "https://github.com/brunopulis/a11y-for-rs/issues"
   },
