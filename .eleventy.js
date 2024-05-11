@@ -52,19 +52,16 @@ module.exports = config => {
   );
 
 
-  /* --- WATCH FOLDERS --- */
-
+  // Watch Folderss
   config.addWatchTarget('./src/scss/');
   config.addWatchTarget('./src/js/');
 
 
   // 11ty defaults
   return {
-
     dir: {
       input: 'src',
-      output: 'build'
+      output: '_site'
     }
-
   };
 };

@@ -9,6 +9,8 @@ node_modules/
 coverage/
 docs/_data/coverage.json
 jsdoc/
+build/
+_site
 
 # Ignore API documentation
 api-docs/
