@@ -11,6 +11,7 @@ docs/_data/coverage.json
 jsdoc/
 build/
 _site
+layout/
 
 # Ignore API documentation
 api-docs/
