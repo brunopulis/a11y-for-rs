@@ -1,0 +1,27 @@
+// =========================================================================
+// Header
+// =========================================================================
+
+.header {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	transition: all 0.4s ease-in-out;
+	z-index: 100;
+	min-height: 60px;
+	background: none;
+
+	.navbar {
+		padding: 0;
+	}
+	
+	.logo-icon {
+		height: 34px;
+		width: auto;
+	}
+}
+
+
+.header-shrink {	
+	@include box-shadow(0 1px 4px 0 rgba(0,0,0,.1));
+	background: var(--theme-text-color-primary);
+}
