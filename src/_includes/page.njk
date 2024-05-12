@@ -3,12 +3,7 @@
 {% include "partials/header.njk" %}
 <main>
 {% block content %}
-  <h1>{{ title }}</h1>
-
-  {{ content | safe }}
-
   {% include "partials/hero.njk" %}
-  {% include "partials/stats.njk" %}
   {% include "partials/about.njk" %}
   {% include "partials/speakers.njk" %}
   {% include "partials/schedule.njk" %}

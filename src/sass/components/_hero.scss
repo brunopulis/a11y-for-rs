@@ -1,0 +1,74 @@
+// =========================================================================
+// Hero
+// =========================================================================
+
+.hero-block {
+	position: relative;
+	@include background-size(cover);
+	height: 620px;
+	padding-top: 130px;
+	
+}
+
+.hero-block-mask {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.hero-carousel {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	.carousel-inner {
+		height: 100%;
+	}
+
+	.carousel-item {
+		background-color: var(--theme-text-color-primary);
+		width: 100%;
+		height: 100%;
+	}
+
+	.carousel-item-1 {
+		background: url('../images/hero-1.jpg') no-repeat center center;
+	}
+
+	.carousel-item-2 {
+		background: url('../images/hero-2.jpg') no-repeat center center;
+	}
+  
+	.carousel-item-3 {
+		background: url('../images/hero-3.jpg') no-repeat center center;
+	}
+}
+
+.hero-text-block {
+	color: #fff;
+	max-width: 600px;
+	position: relative;
+	z-index: 20;
+
+	h1.hero-heading {
+		color: #fff;
+		font-size: 4rem;
+		font-weight: 800;
+	}
+
+	.hero-intro {
+		font-size: 1.75rem;
+	}
+
+	.hero-meta {
+		font-size: 1.75rem;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+	}	
+}
