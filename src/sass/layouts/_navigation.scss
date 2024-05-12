@@ -1,0 +1,37 @@
+// =================================================
+// Navigation
+// =================================================
+
+.navbar-nav {
+	.nav-item {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 0.875rem;
+		&.active {
+			.nav-link {
+				@include opacity(1);
+			}
+		}
+	}
+	.nav-link {
+		color: #fff;
+		@include opacity(0.75);
+		font-weight: 600;
+		padding: 1rem;
+		text-decoration: none;
+		&:hover {
+			@include opacity(1);
+		}
+	}
+}
+
+
+.navbar-toggler {
+    border: 1px solid #fff;
+    padding: 0.4rem 0.5rem;
+    outline: none !important;
+	.navbar-toggler-icon {
+	    background: url('../images/bars.svg') no-repeat left top;
+	    height: 20px;
+	    width: 27px;
+	}
+}
