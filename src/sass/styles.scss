@@ -1,0 +1,32 @@
+/*!  
+ * DevConf - Bootstrap 5 Template For Tech Conferences and Events
+ * Version: Bootstra 5 v3.0
+ * Author: Xiaoying Riley
+ * Copyright: 3rd Wave Media Ltd.
+ * Website: http://themes.3rdwavemedia.com/
+ * Twitter: @3rdwave_themes
+*/
+
+@import "bootstrap/bootstrap";
+
+// Base
+// ==========================================================================
+@import "base/variables";
+
+// Helpers
+// ==========================================================================
+
+// @import "helpers/functions";
+@import "helpers/mixins";
+@import "helpers/commons";
+
+// Layout 
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+
+// Components
+@import "components/hero";
+@import "components/speaker";
+
+

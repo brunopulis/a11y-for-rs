@@ -1,0 +1,75 @@
+
+
+/* Speakers Section */
+.speakers-section {
+	.card {
+		border: none;
+		background: var(--theme-bg-light);
+		margin-bottom: 2rem;
+		height: 100%;
+	}
+	
+	.card-title {
+		font-size: 1.125rem;
+	}
+	
+	.card-img-top {
+		&:hover {
+			@include opacity(0.9);
+		}
+	}
+
+	.card-footer {
+		background: darken(#f0f6fa, 2%);
+		border-top: none;
+	}
+	.social-list {
+		
+		
+	}
+}
+
+.modal-speaker {
+	.profile-image {
+		width: 120px;
+	}
+
+	h2.name {
+		font-size: 1.5rem;
+	}
+	
+	.social-list {
+		font-size: 1.25rem;
+	}
+
+	.modal-content {
+		position: relative;
+	}
+
+	.modal-header {
+		padding: 0;
+		
+		.btn-close {
+			width: 45px;
+			height: 45px;
+			margin: 0;
+			padding: 0;
+			font-size: 2.5rem;
+			font-weight:300;
+			position: absolute;
+			text-shadow: none;
+			color: #fff;
+			background: var(--theme-color-primary);
+			top: 0;
+			right: 0;
+			z-index: 10;
+			@include border-radius(0);
+			line-height: 1;
+
+			&:hover {
+				background: var(--theme-color-primary);
+				color: #fff;
+			}		
+		}
+	}
+}
