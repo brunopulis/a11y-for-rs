@@ -1,67 +1,89 @@
-// 11ty configuration
-const
-  dev = global.dev  = (process.env.ELEVENTY_ENV === 'development'),
-  now = new Date();
+const fs = require("fs");
+const filters = require('./src/_11ty/filters');
+const shortcodes = require('./src/_11ty/shortcodes');
 
-module.exports = config => {
+module.exports = function(eleventyConfig) {
+  // Filters
+  Object.keys(filters).forEach(filterName => {
+    eleventyConfig.addFilter(filterName, filters[filterName])
+  })
 
-  /* --- PLUGINS --- */
+  // Shortcodes
+  Object.keys(shortcodes).forEach(shortcodeName => {
+    eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
+  })
 
   // navigation
-  config.addPlugin( require('@11ty/eleventy-navigation') );
-
-
-  /* --- TRANSFORMS -- */
+  eleventyConfig.addPlugin( require('@11ty/eleventy-navigation') );
 
   // inline assets
-  config.addTransform('inline', require('./lib/transforms/inline'));
+  // eleventyConfig.addTransform('inline', require('./lib/transforms/inline'));
 
   // minify HTML
-  config.addTransform('htmlminify', require('./lib/transforms/htmlminify'));
+  // eleventyConfig.addTransform('htmlminify', require('./lib/transforms/htmlminify'));
 
   // CSS processing
-  config.addTransform('postcss', require('./lib/transforms/postcss'));
+  // eleventyConfig.addTransform('postcss', require('./lib/transforms/postcss'));
 
 
   /* --- FILTERS --- */
+  eleventyConfig.addPassthroughCopy("./src/images");
+  eleventyConfig.addPassthroughCopy("./src/fonts");
+  eleventyConfig.addPassthroughCopy("./src/css");
+  eleventyConfig.addPassthroughCopy("./src/js");
+  eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
-  // format dates
-  const dateformat = require('./lib/filters/dateformat');
-  config.addFilter('datefriendly', dateformat.friendly);
-  config.addFilter('dateymd', dateformat.ymd);
+  eleventyConfig.setBrowserSyncConfig({
+    callbacks: {
+      ready: function(err, browserSync) {
+        const content_404 = fs.readFileSync('_site/404.html');
 
-  // format word count and reading time
-  config.addFilter('readtime', require('./lib/filters/readtime'));
+        browserSync.addMiddleware("*", (req, res) => {
+          // Provides the 404 content without redirect.
+          res.write(content_404);
+          res.end();
+        });
+      }
+    }
+  });
 
+ 
+  eleventyConfig.addExtension("scss", {
+    outputFileExtension: 'css',
+    compile: async function (inputContent) {
+			let result = sass.compileString(inputContent);
 
-  /* --- SHORTCODES --- */
-
-  // page navigation
-  config.addShortcode('navlist', require('./lib/shortcodes/navlist.js'));
-
-
-  /* --- CUSTOM COLLECTIONS --- */
-
-  // post collection (in src/articles)
-  config.addCollection('post', collection =>
-
-    collection
-      .getFilteredByGlob('./src/articles/*.md')
-      .filter(p => dev || (!p.data.draft && p.date <= now))
-
-  );
+			// This is the render function, `data` is the full data cascade
+			return async (data) => {
+				return result.css
+			}
+		},
+  })
 
 
   // Watch Folderss
-  config.addWatchTarget('./src/scss/');
-  config.addWatchTarget('./src/js/');
+  eleventyConfig.addWatchTarget('./src/scss/');
+  eleventyConfig.addWatchTarget('./src/js/');
 
 
   // 11ty defaults
   return {
+    templateFormats: [
+      "md",
+      "njk",
+      "html",
+      // "liquid"
+    ],
+    pathPrefix: "/",
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk",
+    passthroughFileCopy: true,
     dir: {
-      input: 'src',
-      output: '_site'
+      input: "src",
+      includes: "_includes",
+      data: "_data",
+      output: "_site"
     }
   };
 };

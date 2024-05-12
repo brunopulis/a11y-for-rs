@@ -20,6 +20,13 @@
     background-size: $string;
 }
 
+// stylelint-disable property-disallowed-list
+/// @example @include transition (all 0.4s ease-in-out);
+@mixin transition($props, $duration, $delay) {
+  transition: #{$props} $duration $delay;
+}
+  
+
 
 @mixin reset-box-sizing ($size:content-box) {
   &,

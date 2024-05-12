@@ -44,5 +44,4 @@ module.exports = (pageNav, page, maxLevel = 999) => {
   }
 
   return `<${ listType }>${ nav }</${ listType }>`;
-
 };
