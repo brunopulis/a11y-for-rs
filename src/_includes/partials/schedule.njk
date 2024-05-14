@@ -7,11 +7,11 @@
         {% for talk in talks %}
         <div class="item item-talk">
           <div class="meta">
-            <h4 class="time mb-3">9:00 - 9:30</h4>
+            <time class="time mb-3">{{ talk.speakerTime }}</time>
             <div class="profile">
               <img class="profile-image rounded-circle  mb-2" src="{{talk.speakerImage}}" alt="" />
               <div class="name">
-                <p>{{ talk.speakerName }}</p>
+                <strong>{{ talk.speakerName }}</strong>
               </div>
             </div>
           </div>
@@ -19,10 +19,7 @@
             <h3 class="title mb-3">{{ talk.presentationTitle }}</h3>
             <div class="desc">
               <p>{{ talk.presentationSummary }}</p>
-            </div>
-            <div>
-              <p>Quem é {{ talk.speakerName }} ?</p>
-              <p>{{ talk.miniBio }}</p>
+              <p>Baixar a palestra de {{ talk.speakerName }}</p>
             </div>
           </div>
         </div>

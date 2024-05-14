@@ -1,6 +1,8 @@
-const fs = require("fs");
-const filters = require('./src/_11ty/filters');
-const shortcodes = require('./src/_11ty/shortcodes');
+const fs = require("fs")
+const Image = require("@11ty/eleventy-img")
+const filters = require('./src/_11ty/filters')
+const shortcodes = require('./src/_11ty/shortcodes')
+
 
 module.exports = function(eleventyConfig) {
   // Filters
