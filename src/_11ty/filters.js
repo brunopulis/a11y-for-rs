@@ -1,13 +1,7 @@
 const { DateTime } = require("luxon");
 const CleanCSS = require('clean-css');
 const rootUrl = require('../_data/metadata.json').url
-const speaking = require('../_data/speakers.js')
-
-function getRelevance(postTags, matchingPost) {
-  const commonTopics = matchingPost.data.tags.filter(element => postTags.includes(element))
-  const discount = matchingPost.url.includes('30-days') ? 0.5 : 0
-  return commonTopics.length - discount
-}
+const talks = require('../_data/talks.js')
 
 function unique(array) {
   return [...new Set(array)]
@@ -17,66 +11,11 @@ function readableDate(dateObj) {
   return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
 }
 
-function mergeExternalTaggedPosts(taggedPosts, externalPosts, tag) {
-  const taggedExternal = externalPosts.filter(post => post.tags.includes(tag))
-
-  return mergeExternalPosts(taggedPosts, taggedExternal)
-}
-
-function mergeExternalPosts(posts = [], externalPosts = []) {
-  const postData = posts.map(post => {
-    const {data, date, url} = post
-    const {title, description, tags, featuredImage} = data
-
-    return {
-      date,
-      readableDate: readableDate(date),
-      url,
-      data: {
-        title,
-        description,
-        tags,
-        featuredImage,
-      }
-    }
-  })
-  const externalPostData = externalPosts.map(post => {
-    const {title, date, url, description, tags, publicationName, featuredImage} = post
-
-    return {
-      date,
-      readableDate: readableDate(post.date),
-      url,
-      data: {
-        title,
-        description,
-        tags,
-        publicationName,
-        featuredImage,
-        external: true,
-      }
-    }
-  })
-
-  return [...postData, ...externalPostData].sort((a, b) => {
-    if (a.date < b.date) {
-      return -1;
-    }
-    if (a.date > b.date) {
-      return 1;
-    }
-    // a must be equal to b
-    return 0;
-  })
-}
-
 module.exports = {
   cssmin: code => {
     return new CleanCSS({}).minify(code).styles;
   },
-  getSpeaking: timing =>  speaking[timing],
   getSelect: posts => posts.filter(post => post.data.isSelect),
-  getTalkForEvent: id => talks[id],
   // Get the first `n` elements of a collection.
   head: (array, n) => {
     if( n < 0 ) {
@@ -96,8 +35,6 @@ module.exports = {
   htmlDateString: (dateObj) => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   },
-  mergeExternalPosts,
-  mergeExternalTaggedPosts,
   readableDate,
   readableDateFromISO: (dateStr, formatStr = "dd LLL yyyy") => {
     return DateTime.fromISO(dateStr).toFormat(formatStr);
