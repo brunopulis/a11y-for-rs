@@ -59,7 +59,18 @@
   </div><!--//modal-dialog-->
 </div><!--//modal-->
 
-  <!-- Javascript -->          
+  <!-- Javascript -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>          
   <script src="./js/lib/popper.min.js"></script>
   <script src="./js/lib/bootstrap/js/bootstrap.min.js"></script>  
   <script src="./js/lib/smoothscroll.min.js"></script>
