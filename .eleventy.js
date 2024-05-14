@@ -26,7 +26,8 @@ module.exports = function(eleventyConfig) {
   // eleventyConfig.addTransform('postcss', require('./lib/transforms/postcss'));
 
 
-  /* --- FILTERS --- */
+  // PassthroughCopy
+  eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("./src/images");
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/css");
