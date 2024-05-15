@@ -5,7 +5,8 @@ module.exports = [
     speakerImage: './images/speakers/elza.png',
     presentationTitle: 'Como construir uma comunicação para todas as pessoas?',
     presentationSummary: 'Você vai conhecer diversas boas práticas para construirmos uma comunicação mais diversa, inclusiva e acessível para todas as pessoas. A acessibilidade digital é um dos destaques para que isso aconteça. O convite é colaborarmos para um mundo melhor por meio dessa comunicação, um dia de cada vez. Vamos lá?',
-    miniBio: "Comunicadora com mais de 20 anos de experiência, Fundadora da Maria Inclusiva, negócio de impacto social que busca eliminar barreiras na comunicação. Especialista em comunicação diversa, inclusiva e acessível para todas as pessoas.",
+    jobTitle: 'Fundadora e CEO da Maria Inclusiva',
+    company: 'Maria Inclusiva',
     presentationLink: ''
   },
   {
@@ -14,7 +15,8 @@ module.exports = [
     speakerImage: './images/speakers/reinaldo-ferraz.png',
     presentationTitle: 'Pessoas idosas na web',
     presentationSummary: "A população está envelhecendo. O que acontece, muitas vezes, é que cada vez mais pessoas enfrentam desafios relacionados à idade. Por isso, precisamos considerar a acessibilidade no dia a dia. Neste encontro, conheça as boas práticas que beneficiam esse grupo de pessoas usuárias que está aumentando cada vez mais e que, possivelmente, faremos parte dele.",
-    miniBio: 'XYZ',
+    jobTitle: 'Fundadora e CEO da Maria Inclusiva',
+    company: 'Maria Inclusiva',
     presentationLink: ''
   },
   {
@@ -56,7 +58,7 @@ module.exports = [
   {
     speakerName: 'Eduardo Zangrossi Lino e Cadu Ribeiro',
     speakerTime: '15:00 - 15:30',
-    speakerImage: './images/speakers/speaker-1.jpg',
+    speakerImage: './images/speakers/edu-cadu.png',
     presentationTitle: '70% pessoas, 30% técnico: O lado humano do design acessível',
     presentationSummary: 'Junte-se a nós para uma conversa descontraída com Eduardo e Cadu! Eles vão compartilhar suas vivências sobre a importância do toque humano na criação de projetos acessíveis. Descubra como essa perspectiva mudou vidas e como a acessibilidade se tornou parte do dia a dia dos palestrantes. Durante o encontro, vamos explorar, juntos, como integrar a acessibilidade em nossos próprios projetos e na sociedade.',
     miniBio: 'Eduardo Zangrossi Lino: Product Designer com mais de 11 anos de experiência na indústria tech e com foco em Acessibilidade Web e Digital e experiência em Desenvolvimento Front-end, integra equipes multidisciplinares de design e desenvolvimento durante todo o ciclo de criação e growth de produtos digitais, atuando como facilitador para uma comunicação mais eficaz entre as equipes e introduzindo soluções inovadoras e inclusivas. Cadu Ribeiro: Designer, professor e pesquisador. Mestre em Design pela PUC-Rio e especialista em Ergodesign, usabilidade e interação humano-computador pela mesma instituição. Já contribuiu para diversas startups no Rio de Janeiro, São Paulo e Portugal montando times de UX e liderando equipes, sempre com foco em projetos inclusivos.',
