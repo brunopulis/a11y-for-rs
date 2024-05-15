@@ -15,8 +15,8 @@ module.exports = [
     speakerImage: './images/speakers/reinaldo-ferraz.png',
     presentationTitle: 'Pessoas idosas na web',
     presentationSummary: "A população está envelhecendo. O que acontece, muitas vezes, é que cada vez mais pessoas enfrentam desafios relacionados à idade. Por isso, precisamos considerar a acessibilidade no dia a dia. Neste encontro, conheça as boas práticas que beneficiam esse grupo de pessoas usuárias que está aumentando cada vez mais e que, possivelmente, faremos parte dele.",
-    jobTitle: 'Fundadora e CEO da Maria Inclusiva',
-    company: 'Maria Inclusiva',
+    jobTitle: 'Project Manager',
+    company: 'NIC.br',
     presentationLink: ''
   },
   {
