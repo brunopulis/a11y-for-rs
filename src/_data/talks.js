@@ -9,10 +9,7 @@ module.exports = [
     jobTitle: 'Fundadora e CEO da Maria Inclusiva',
     company: 'Maria Inclusiva',
     presentationLink: '',
-    linkedin: 'https://www.linkedin.com/in/elza-maria-albuquerque/ ',
-    github: '',
-    instagram: '',
-    twitter: '' 
+    linkedin: 'https://www.linkedin.com/in/elza-maria-albuquerque/ ' 
   },
   {
     speakerName: 'Reinaldo Ferraz',
@@ -24,10 +21,7 @@ module.exports = [
     jobTitle: 'Project Manager',
     company: 'NIC.br',
     presentationLink: '',
-    linkedin: 'https://www.linkedin.com/in/reinaldoferraz/',
-    github: '',
-    instagram: '',
-    twitter: '', 
+    linkedin: 'https://www.linkedin.com/in/reinaldoferraz/'
   },
   {
     speakerName: 'Alex Barboza',
@@ -40,7 +34,7 @@ module.exports = [
     jobTitle: 'Desenvolvedor Android',
     company: 'Swiss Post',
     presentationLink: '',
-    linkedin: 'https://www.linkedin.com/in/alex-r-a3319214b',
+    linkedin: 'https://www.linkedin.com/in/alex-r-a3319214b'
   },
   {
     speakerName: 'Vitor David',
@@ -82,10 +76,7 @@ module.exports = [
     presentationLink: '',
     jobTitle: 'Analista de Acessibilidade',
     company: 'NTT Data',
-    linkedin: 'https://www.linkedin.com/in/marilibras/',
-    github: '',
-    instagram: '',
-    twitter: '' 
+    linkedin: 'https://www.linkedin.com/in/marilibras/'
   },
   {
     speakerName: 'Eduardo Lino e Cadu Ribeiro',
@@ -97,10 +88,7 @@ module.exports = [
     miniBio: 'Eduardo Zangrossi Lino: Product Designer com mais de 11 anos de experiência na indústria tech e com foco em Acessibilidade Web e Digital e experiência em Desenvolvimento Front-end, integra equipes multidisciplinares de design e desenvolvimento durante todo o ciclo de criação e growth de produtos digitais, atuando como facilitador para uma comunicação mais eficaz entre as equipes e introduzindo soluções inovadoras e inclusivas. Cadu Ribeiro: Designer, professor e pesquisador. Mestre em Design pela PUC-Rio e especialista em Ergodesign, usabilidade e interação humano-computador pela mesma instituição. Já contribuiu para diversas startups no Rio de Janeiro, São Paulo e Portugal montando times de UX e liderando equipes, sempre com foco em projetos inclusivos.',
     presentationLink: '',
     linkedin1: 'https://www.linkedin.com/in/eduzangrossi/',
-    linkedin2: 'https://www.linkedin.com/in/caduxribeiro/',
-    github: '',
-    instagram: '',
-    twitter: ''
+    linkedin2: 'https://www.linkedin.com/in/caduxribeiro/'
   },
   {
     speakerName: 'Doriane Vasconcelos',
