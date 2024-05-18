@@ -1,0 +1,67 @@
+{
+  "title": "A11y pelo RS",
+  "description": "Evento solidario em apoio ao Rio Grande do Sul",
+  "baseUrl": "https://a11y-pelo-rs.netlify.app",
+  "repository": "https://github.com/brunopulis/a11y-pelo-rs",
+  "seo": {
+    "og": {
+      "src": ""
+    },
+    "twitter": {
+      "src": ""
+    }
+  },
+  "contact": {
+    "phone": {
+      "name": "Contact Number",
+      "identifier": "+63 912 345 6789",
+      "url":"tel:+639123456789"
+    },
+    "email": {
+      "name": "",
+      "identifier": "",
+      "url": ""
+    },
+    "linkedin": {
+      "name": "",
+      "identifier": "",
+      "url": ""
+    },
+    "instagram": {
+      "name": "",
+      "identifier": "",
+      "url": ""
+    },
+    "twitter": {
+      "name": "",
+      "identifier": "",
+      "url": ""
+    },
+    "github": {
+      "name": "",
+      "identifier": "",
+      "url": ""
+    },
+    "mastodon": {
+      "name": "",
+      "identifier": "",
+      "url": ""
+    },
+    "youtube": {
+      "name": "",
+      "identifier": "",
+      "url": ""
+    }
+  },
+  "domains": [
+    {
+      "name": "",
+      "domain": "",
+      "isPreferred": false
+    }
+  ],
+  "api": {
+    "email": "https://form.taxi/s/g69v4mlz",
+    "siteData": "/api/v1/site-data.json"
+  }
+}

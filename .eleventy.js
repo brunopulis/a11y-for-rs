@@ -18,16 +18,6 @@ module.exports = function(eleventyConfig) {
   // navigation
   eleventyConfig.addPlugin( require('@11ty/eleventy-navigation') );
 
-  // inline assets
-  // eleventyConfig.addTransform('inline', require('./lib/transforms/inline'));
-
-  // minify HTML
-  // eleventyConfig.addTransform('htmlminify', require('./lib/transforms/htmlminify'));
-
-  // CSS processing
-  // eleventyConfig.addTransform('postcss', require('./lib/transforms/postcss'));
-
-
   // PassthroughCopy
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("./src/images");
