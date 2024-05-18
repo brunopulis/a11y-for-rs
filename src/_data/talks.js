@@ -79,6 +79,7 @@ module.exports = [
     linkedin: 'https://www.linkedin.com/in/marilibras/'
   },
   {
+    speakerId: 'two',
     speakerName: 'Eduardo Lino e Cadu Ribeiro',
     speakerTime: '15:00 - 15:30',
     speakerImage: './images/speakers/edu-cadu.png',
@@ -86,6 +87,8 @@ module.exports = [
     presentationTitle: '70% pessoas, 30% técnico: O lado humano do design acessível',
     presentationSummary: 'Junte-se a nós para uma conversa descontraída com Eduardo e Cadu! Eles vão compartilhar suas vivências sobre a importância do toque humano na criação de projetos acessíveis. Descubra como essa perspectiva mudou vidas e como a acessibilidade se tornou parte do dia a dia dos palestrantes. Durante o encontro, vamos explorar, juntos, como integrar a acessibilidade em nossos próprios projetos e na sociedade.',
     miniBio: 'Eduardo Zangrossi Lino: Product Designer com mais de 11 anos de experiência na indústria tech e com foco em Acessibilidade Web e Digital e experiência em Desenvolvimento Front-end, integra equipes multidisciplinares de design e desenvolvimento durante todo o ciclo de criação e growth de produtos digitais, atuando como facilitador para uma comunicação mais eficaz entre as equipes e introduzindo soluções inovadoras e inclusivas. Cadu Ribeiro: Designer, professor e pesquisador. Mestre em Design pela PUC-Rio e especialista em Ergodesign, usabilidade e interação humano-computador pela mesma instituição. Já contribuiu para diversas startups no Rio de Janeiro, São Paulo e Portugal montando times de UX e liderando equipes, sempre com foco em projetos inclusivos.',
+    jobTitle1: 'Product Designer',
+    jobTitle2: 'Designer, Professor e pesquisador',
     presentationLink: '',
     linkedin1: 'https://www.linkedin.com/in/eduzangrossi/',
     linkedin2: 'https://www.linkedin.com/in/caduxribeiro/'

@@ -1,42 +1,85 @@
 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 mb-4">
-  <div class="card rounded-0">
-    <img src="{{ talk.speakerImage }}" class="card-img-top rounded-0" alt="{{ talk.speakerImageAlt }}" />
+  {% if(talk.speakerId == 'two') %}
+    <div class="card rounded-0">
+      <img src="{{ talk.speakerImage }}" class="card-img-top rounded-0" alt="{{ talk.speakerImageAlt }}" />
 
-    <div class="card-body">
-      <h5 class="card-title mb-2">{{ talk.speakerName }}</h5>
-      <div class="card-text mb-3">
-        <div class="meta">
-          {{ talk.jobTitle }}</div>
-        <div class="meta">{{talk.company}}</div>
+      <div class="card-body">
+        <h3 class="card-title mb-2">{{ talk.speakerName }}</h3>
+        <div class="card-text mb-3">
+          <div class="meta">
+            <p>
+              {{ talk.jobTitle1 }} <br>
+              {{ talk.jobTitle2 }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer text-muted">
+        <ul class="social-list list-inline mb-0" arial-label="Redes sociais dos palestrantes">
+          {% if(talk.linkedin1) %}
+            <li class="list-inline-item">
+              <a  href="{{ talk.linkedin1 }}" rel="nooperner noreferrer" target="_blank">
+                <span class="sr-only">Linkedin</span>
+                <svg width="25" height="25" aria-hidden="true"><use href="./images/sprites/brands.svg#linkedin"></use></svg>
+              </a>
+            </li>
+          {% endif %}
+
+          {% if(talk.linkedin2) %}
+            <li class="list-inline-item">
+              <a  href="{{ talk.linkedin2 }}" rel="nooperner noreferrer" target="_blank">
+                <span class="sr-only">Linkedin</span>
+                <svg width="25" height="25"><use href="./images/sprites/brands.svg#linkedin"></use></svg>
+              </a>
+            </li>
+          {% endif %}
+        </ul><!--//social-list-->
+      </div>
+    </div><!--//card-->
+  {% else %}
+    <div class="card rounded-0">
+      <img src="{{ talk.speakerImage }}" class="card-img-top rounded-0" alt="{{ talk.speakerImageAlt }}" />
+
+      <div class="card-body">
+        <h3 class="card-title mb-2">{{ talk.speakerName }}</h3>
+        <div class="card-text mb-3">
+          <div class="meta">
+            <p>{{ talk.jobTitle }}</p>
+          </div>
+          <div class="meta">
+            <p>{{talk.company}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer text-muted">
+        <ul class="social-list list-inline mb-0" arial-label="Redes sociais dos palestrantes">
+          {% if(talk.linkedin) %}
+            <li class="list-inline-item">
+              <a  href="{{ talk.linkedin }}" rel="nooperner noreferrer" target="_blank">
+                <span class="sr-only">Linkedin</span>
+                <svg width="25" height="25" aria-hidden="true"><use href="./images/sprites/brands.svg#linkedin"></use></svg>
+              </a>
+            </li>
+          {% endif %}
+          {% if(talk.github) %}
+            <li class="list-inline-item">
+              <a  href="{{talk.github}}" rel="nooperner noreferrer" target="_blank">
+                <svg width="25" height="25" aria-hidden="true"><use href="./images/sprites/brands.svg#github"></use></svg>
+              </a>
+            </li>
+          {% endif %}
+          {% if(talk.twitter) %}
+            <li class="list-inline-item">
+              <a href="{{talk.twitter}}" rel="nooperner noreferrer" target="_blank">
+                <span class="sr-only">Twitter</span>
+                <svg width="25" height="25" aria-hidden="true"><use href="./images/sprites/brands.svg#twitter"></use></svg>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
       </div>
     </div>
-
-    <div class="card-footer text-muted">
-      <ul class="social-list list-inline mb-0" arial-label="Redes sociais dos palestrantes">
-        {% if(talk.linkedin) %}
-          <li class="list-inline-item">
-            <a  href="{{ talk.linkedin }}" rel="nooperner noreferrer" target="_blank">
-              <span class="sr-only">Linkedin</span>
-              <svg width="25" height="25"><use href="./images/sprites/brands.svg#linkedin"></use></svg>
-            </a>
-          </li>
-        {% endif %}
-        {% if(talk.github) %}
-          <li class="list-inline-item">
-            <a  href="{{talk.github}}" rel="nooperner noreferrer" target="_blank">
-              <svg width="25" height="25"><use href="./images/sprites/brands.svg#github"></use></svg>
-            </a>
-          </li>
-        {% endif %}
-        {% if(talk.twitter) %}
-          <li class="list-inline-item">
-            <a href="{{talk.twitter}}" rel="nooperner noreferrer" target="_blank">
-              <span class="sr-only">Twitter</span>
-              <svg width="25" height="25"><use href="./images/sprites/brands.svg#twitter"></use></svg>
-            </a>
-          </li>
-        {% endif %}
-      </ul><!--//social-list-->
-    </div>
-  </div><!--//card-->
-</div><!--//col-->
+  {% endif %}
+</div>
