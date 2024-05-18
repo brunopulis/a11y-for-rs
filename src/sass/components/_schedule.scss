@@ -1,39 +1,13 @@
 // ===============================================
-//
+// Schedule
 // ===============================================
 
-/* Schedule Section */
-.schedule-nav {
-	.nav-item {
-
-		span {
-			display: block;
-		}
-		.heading {
-			font-family: 'Montserrat', sans-serif;
-			font-weight: 700;
-			font-size: 1.25rem;
-		}
-		.meta {
-			@include opacity(0.8);
-		}
-	}
-	
-	.nav-link {
-		background: #ccc;
-		@include border-radius(0);
-		border-right: rgba(0, 0, 0, 0.1);
-		text-decoration: none;
-
-	}
-}
-
-.schedule-tab-content {
+.schedule {
 	padding: 2rem 0;
-	
-	
-	.tab-pane {
+		
+	&-content {
 		position: relative;
+
 		&:after {
 			content: "";
 			display: block;
@@ -44,53 +18,43 @@
 			left: 196px;
 			top: 5px;
 			
-		}
-		
-		&.no-timeline {
-			&:after {
+			@media(max-width:768px) {
 				display: none;
 			}
 		}
 	}
 	
-	.item {
+	&-item {
 		position: relative;
 		margin-bottom: 2rem;
 		
-		&-talk {
+		&--talk {
 			min-height: 165px;
+		}
+
+		@media(max-width:768px) {
+			background-color: var(--theme-bg-light);
 		}
 		
 		&:after {
 			content: "";
-		    display: inline-block;
-		    position: absolute;
-		    z-index: 5;
-		    left: 190px;
-		    top: 5px;
-		    width: 16px;
-		    height: 16px;
-		    border: 4px solid #ccc;
-		    background: white;
-		    border-radius: 50%;
-		}
-		.meta {
+			display: inline-block;
 			position: absolute;
-			left: 0;
-		    top: 0;
-		    width: 200px;
-		    padding: 1rem;
-		    padding-top: 0;
-		    text-align: center;
-		    font-size: 0.875rem;
-		    .time {
-			    font-size: 1.25rem;
-			    color: #000;
-		    }
-		    .location {
-			    font-weight: bold;
-		    }
+			z-index: 5;
+			left: 190px;
+			top: 5px;
+			width: 16px;
+			height: 16px;
+			border: 4px solid #ccc;
+			background: white;
+			border-radius: 50%;
+
+			@media(max-width:768px) {
+				display: none;
+			}
 		}
+
+		
 		.profile-image {
 			width: 80px;
 			
@@ -101,7 +65,40 @@
 			.title {
 				font-size: 1.25rem;
 			}
+
+			@media(max-width: 768px) {
+				padding: 20px;
+			}
 		}
 	}
 }
 
+.schedule-meta {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200px;
+	padding: 1rem;
+	padding-top: 0;
+	text-align: center;
+	font-size: 0.875rem;
+
+	@media(max-width: 768px) {
+		position: inherit;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		width: 100%;
+		padding: 20px;
+	}
+}
+
+.schedule-time {
+	font-size: 1.25rem;
+	color: #000;
+}
+
+.schedule-location {
+	font-weight: bold;
+}
