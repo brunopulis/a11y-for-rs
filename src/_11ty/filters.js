@@ -1,6 +1,5 @@
 const { DateTime } = require("luxon");
 const CleanCSS = require('clean-css');
-const rootUrl = require('../_data/metadata.json').url
 const talks = require('../_data/talks.js')
 
 function unique(array) {

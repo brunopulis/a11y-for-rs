@@ -1,5 +1,5 @@
 ---
-description: This is a demonstration website generated using the 11ty static site generator.
+description: Evento solidario pelo Rio Grande do Sul
 layout: page.njk
 ---
 

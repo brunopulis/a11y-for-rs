@@ -1,15 +1,18 @@
-{% include "partials/htmlhead.njk" %}
-
-{% include "partials/header.njk" %}
-<main>
-{% block content %}
-  {% include "partials/hero.njk" %}
-  {% include "partials/about.njk" %}
-  {% include "partials/speakers.njk" %}
-  {% include "partials/schedule.njk" %}
-  {% include "partials/sponsors.njk" %}
-  {% include "partials/pagelist.njk" %}
-{% endblock %}
-</main>
-
-{% include "partials/footer.njk" %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  {% include "partials/head/head.njk" %}
+  <body>
+    {% include "partials/header.njk" %}
+    <main>
+      {% block content %}
+        {% include "partials/hero.njk" %}
+        {% include "partials/about.njk" %}
+        {% include "partials/speakers.njk" %}
+        {% include "partials/schedule.njk" %}
+        {% include "partials/sponsors.njk" %}
+        {% include "partials/pagelist.njk" %}
+      {% endblock %}
+    </main>
+    {% include "partials/footer.njk" %}
+  </body>
+</html>
