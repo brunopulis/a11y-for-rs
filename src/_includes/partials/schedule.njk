@@ -1,27 +1,30 @@
-<section id="schedule-section" class="schedule-section section">
+<section class="schedule-section section" id="schedule-section">
   <div class="container">
     <h2 class="section-heading text-center">Programação do evento</h2>
     <p class="text-center mb-5">Conheça a programação e as pessoas palestrantes que vão compartilhar conhecimento com você no dia 18 de maio! 
     </p>
 
-    <div class="schedule-tab-content tab-content">
-      <div class="tab-pane active" id="tab-1-content" role="tabpanel" aria-labelledby="tab-1">
+    <div class="schedule tab-content">
+      <div class="schedule-content">
         {% for talk in talks %}
-        <div class="item item-talk">
-          <div class="meta">
+        <div class="schedule-item schedule-item--talk">
+
+          <div class="schedule-meta">
             <time class="time mb-3">{{ talk.speakerTime }}</time>
-            <div class="profile">
+
+            <div class="schedule-profile">
               <img class="profile-image rounded-circle  mb-2" src="{{talk.speakerImage}}" alt="{{ talk.speakerImageAlt }}" />
               <div class="name">
-                <strong>{{ talk.speakerName }}</strong>
+                <p><strong>{{ talk.speakerName }}</strong></p>
               </div>
             </div>
           </div>
-          <div class="content">
+
+          <div class="schedule-body content">
             <h3 class="title mb-3">{{ talk.presentationTitle }}</h3>
             <div class="desc">
               <p>{{ talk.presentationSummary }}</p>
-              <p>Baixar a palestra de {{ talk.speakerName }}</p>
+              {# <a href="{{ talk.presentationLink }}" rel="noreferrer noopener" target="_blank">Baixar a palestra de {{ talk.speakerName }}</a> #}
             </div>
           </div>
         </div>
